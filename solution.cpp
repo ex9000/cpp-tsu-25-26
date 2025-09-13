@@ -1,5 +1,5 @@
 #include <iostream>
 int main() {
-  std::cout << 800 << std::endl;
+  std::cout << 700 << std::endl;
   return 0;
 }
