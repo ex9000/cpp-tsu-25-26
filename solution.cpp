@@ -18,7 +18,7 @@ int main() {
         
     }
 
-    cout << amount;
+    cout << amount << endl;
     return 0;
 
 }
