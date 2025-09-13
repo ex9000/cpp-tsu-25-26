@@ -12,24 +12,24 @@ int main() {
         cout << "Ничего не куплено. Стоимость чека: 0" << endl;
         return 0;
     }
-    
- int amount = 0;
+  
+  int amount = 0;
 
- for(int i = 1; i <= n; i++){
-     int price;
-     int amt;
+  for(int i = 1; i <= n; i++){
+      int price;
+      int amt;
      
-     cout << "Кол-во товаров №:" << i << ": ";
-     cin >> amt;
+      cout << "Кол-во товаров №:" << i << ": ";
+      cin >> amt;
      
-     cout << "Цена товара №:" << i << ": ";
-     cin >> price;
+      cout << "Цена товара №:" << i << ": ";
+      cin >> price;
      
-     amount += amt * price;
- }
+      amount += amt * price;
+   }
  
- cout << "Cтоимость чека: " << amount << endl;
+  cout << "Cтоимость чека: " << amount << endl;
  
- return 0;
+  return 0;
 
 }
