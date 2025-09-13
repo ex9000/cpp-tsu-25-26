@@ -1,5 +1,5 @@
 #include <iostream>
-#incldue <string>
+#include <string>
 using namespace std;
 int main() {
   string s;
