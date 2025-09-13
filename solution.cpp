@@ -1,17 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 int main() {
     
-    int n;
-    cout << "Кол-во видов товара: ";
-    cin >> n;
-    
-    if (n <= 0) {
-        cout << "Ничего не куплено. Стоимость чека: 0" << endl;
-        return 0;
-    }
+  int n;
+  cin >> n;
   
   int amount = 0;
 
@@ -19,16 +12,16 @@ int main() {
       int price;
       int amt;
      
-      cout << "Кол-во товаров №:" << i << ": ";
+      cout << i ;
       cin >> amt;
      
-      cout << "Цена товара №:" << i << ": ";
+      cout << i;
       cin >> price;
      
       amount += amt * price;
    }
  
-  cout << "Cтоимость чека: " << amount << endl;
+  cout << amount << endl;
  
   return 0;
 
