@@ -14,6 +14,6 @@ int main()
         result = result + (counts * cost);
     }
     
-    std::cout << result;
+    std::cout << result << std::endl;
     return 0;
 }
