@@ -11,7 +11,7 @@ int main() {
     for(int i = 1; i <= n; i++){
         int price;
         int amt;
-        ;
+        
         cin >> amt;
         cin >> price;
         amount += amt * price;
