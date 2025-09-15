@@ -8,5 +8,5 @@ int main() {
     std::cin >> p >> k;
     total += p * k
 }
-  std::cout << "Result= " << total << std::endl;
+  std::cout << "Result= " << total <<  endl;
 return 0
