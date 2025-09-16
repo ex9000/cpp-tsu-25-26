@@ -5,7 +5,6 @@ int main() {
     int oleg;
     int v;
     int u;
-    cout << "Enter your value: ";
     cin >> oleg;
     for (int i = 0; i< oleg; i++){
         int v = 0;
