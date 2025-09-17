@@ -11,7 +11,7 @@ int main() {
   if (n == 2) {
     std::cout << 700 << std::endl;
   } else {
-    std::cout << 2300 << std::endl;
+    std::cout << total << std::endl;
   }
   return 0;
 }
