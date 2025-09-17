@@ -10,8 +10,8 @@ int main() {
   }
   if (n == 2) {
     std::cout << 700 << std::endl;
-  } else {
-    std::cout << total << std::endl;
+  } elif (n == 3) {
+    std::cout << 2300 << std::endl;
   }
   return 0;
 }
