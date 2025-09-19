@@ -1,5 +1,17 @@
 #include <iostream>
 int main() {
-  std::cout << 700 << std::endl;
-  return 0;
+    int N;
+    std::cin >> N;
+    int Finish = 0;
+    int i = 0;
+    
+    while (i < N) { 
+        int K, P;
+        std::cin >> K >> P;
+        Finish += K * P;
+        i++;
+    }
+    
+    std::cout << Finish;
+    return 0;
 }
