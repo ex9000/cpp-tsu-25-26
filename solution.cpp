@@ -4,10 +4,10 @@ using namespace std;
 
 int main() {
     string str1, str2, str3;
-    int n;
+    int n;                 
     cin >> str1 >> str2 >> str3 >> n;
     cin.ignore();
-
+    
     int TSum = 0;
     int TCount = 0;
 
@@ -15,21 +15,37 @@ int main() {
         string line;
         getline(cin, line);
 
-        int start1 = line.find_first_of("0123456789");
-        int end1 = line.find_first_not_of("0123456789", start1);
-        int num_1 = stoi(line.substr(start1, end1 - start1));
+        int k = 1;
+        int p = 0;
 
-        int end2 = line.find_last_of("0123456789");
-        int start2 = line.find_last_not_of("0123456789", end2) + 1;
-        int num_2 = stoi(line.substr(start2, end2 - start2 + 1));
+        int rubPos = line.find("ру");
+        if (rubPos != string::npos) {
+            string priceStr = "";
+            int j = rubPos - 1;
+            while (j >= 0 and ((line[j] >= '0' and line[j] <= '9') or line[j] == ' ')) {
+                if (line[j] >= '0' and line[j] <= '9') {
+                    priceStr = line[j] + priceStr;
+                }
+                j--;
+            }
+            if (!priceStr.empty()) {
+                p = stoi(priceStr);
+            }
+        }
 
-        int p, k;
-        if (line.find("за") != string::npos) {
-            p = num_1;
-            k = 1;
-        } else {
-            p = num_1;
-            k = num_2;
+        if (line.find("по") != string::npos) {
+            int colonPos = line.find(':');
+            if (colonPos != string::npos) {
+                string countStr = "";
+                for (int j = colonPos + 1; j < line.size(); j++) {
+                    if (line[j] >= '0' and line[j] <= '9') {
+                        countStr += line[j];
+                    }
+                }
+                if (!countStr.empty()) {
+                    k = stoi(countStr);
+                }
+            }
         }
 
         TSum += k * p;
@@ -41,6 +57,6 @@ int main() {
     } else {
         cout << "Куплено " << TCount << " штук товара за " << TSum << " рублей" << endl;
     }
-
+    
     return 0;
 }
