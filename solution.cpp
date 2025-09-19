@@ -1,5 +1,14 @@
 #include <iostream>
+using namespace std;
 int main() {
-  std::cout << 700 << std::endl;
-  return 0;
+    int N;
+    cin >> N;
+    int Result = 0;
+    for (int i = 0; i < N; i++) {
+        int k, p;
+        cin >> k >> p;
+        Result += k * p;
+    }    
+    cout << Result << endl;
+    return 0;
 }
