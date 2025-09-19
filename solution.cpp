@@ -3,10 +3,11 @@
 using namespace std;
 
 int main() {
-    string str1, str2, str3;
-    int n;                 
-    cin >> str1 >> str2 >> str3 >> n;
-    cin.ignore();
+    string z;
+    getline(cin,z);
+
+    int pos = z.find(':');
+    int n = stoi(z.substr(pos + 1));
     
     int TSum = 0;
     int TCount = 0;
