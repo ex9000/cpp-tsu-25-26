@@ -1,5 +1,18 @@
 #include <iostream>
+
 int main() {
-  std::cout << 700 << std::endl;
-  return 0;
+    int price;   
+    int count;   
+    int total;
+    
+    std::cin >> price;
+    std::cin >> count;
+    
+    total = price * count;
+    
+    std::cout << price << std::endl;
+    std::cout << count << std::endl;
+    std::cout << total << std::endl;
+    
+    return 0;
 }
