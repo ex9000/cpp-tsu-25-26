@@ -1,14 +1,16 @@
 #include <iostream>
-int main(){
+using namespace std;
+int main() {
     int N;
-    std::cin>> N;
+    cin >> N;
     int Result = 0;
     int i;
-    for (i = 0; i < N; i++){
+    for (i = 0; i < N; i++) {
         int k, p;
-        std::cin>> k >> p;
+        cin >> k >> p;
         Result += k * p;
     }
-    std::cout<< Result;
+    
+    cout << Result << endl;
     return 0;
 }
