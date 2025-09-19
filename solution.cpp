@@ -7,7 +7,7 @@ int main()
     int c, p, s;
     for(int i = 0; i<n; i++) {
         std::cin >> c >> p;
-        s += c * p;
+        s = s + c * p;
     }
-    std::cout << 700 << std::endl;
+    std::cout << s << std::endl;
 }
