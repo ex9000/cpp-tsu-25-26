@@ -10,6 +10,6 @@ int main() {
   std::cin>>price;
   sum+=number*price;
   }
-  std::cout<<sum;
+  std::cout<<sum<< std::endl;
   return 0;
 }
