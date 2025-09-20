@@ -1,21 +1,21 @@
 #include <iostream>
 #include <string>
 int main() {
-    std::string line;
-    int total_sum = 0;
-    int total_k = 0;
-    for (int i = 0; i < n; ++i) {
-        std::getline(std::cin, line);
-        int k = 1;
-        int p = 0;
-        total_sum += k * p;
-        total_k += k;
+    int n;
+    std::cin >> n;
+    string "Позиций в чеке: n";
+    int total = 0;
+    for(int i; i < n, i++) {
+        int k, p;
+        std::cin >> k >> p;
+        string " k штуки";
+        string "за p рублей";
+        total += k * p;
     }
-    if (total_k == 1) {
-        std::cout << "Куплен товар за " << total_sum << " рублей" << std::endl;
+    if (n == 1) {
+        std::cout << "Куплен товар за p рублей" << endl;
     } else {
-        std::cout << "Куплено " << total_k << " штук товара за " << total_sum << " рублей" << std::endl;
+        std::cout << "Куплено k штук товара за p рублей" << endl;
     }
-
     return 0;
 }
