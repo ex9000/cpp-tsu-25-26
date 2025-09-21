@@ -1,7 +1,7 @@
 #include <iostream>
 int main() {
   int n;
-  int sum;
+  int sum = 0;
   std::cin >> n;
   for (int q=0;q<n;q++) {
   int number;
