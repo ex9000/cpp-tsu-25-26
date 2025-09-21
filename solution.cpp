@@ -1,21 +1,25 @@
 #include <iostream>
 #include <string>
 int main() {
-    int n;
-    std::cin >> n;
-    string "Позиций в чеке: n";
-    int total = 0;
-    for(int i; i < n, i++) {
-        int k, p;
-        std::cin >> k >> p;
-        string " k штуки";
-        string "за p рублей";
-        total += k * p;
-    }
+  int n;
+  std::cin >> "Позиций в чеке: " >> n;
+  int total = 0;
+  int count = 0;
+  for(int i; i < n, i++) {
+    int k, p;
+    std::string b;
     if (n == 1) {
-        std::cout << "Куплен товар за p рублей" << endl;
+      std::cin >> b >> " за " >> p >> " рублей";
     } else {
-        std::cout << "Куплено k штук товара за p рублей" << endl;
+      std::cin >> b >> " по " >> p >> " рублей " >> k >> " штуки";
     }
-    return 0;
+    total += k * p;
+    count += k;
+  }
+  if (n == 1) {
+    std::cout << "Куплен товар за " << total << " рублей" << endl;
+  } else {
+    std::cout << "Куплено " << count << " штук товара за " << total << " рублей" << endl;
+  }
+  return 0;
 }
