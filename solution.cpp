@@ -17,12 +17,10 @@ int main() {
     total += k * p;
     count += k;
     }
-    if (n > 1) {
-        std::cout << "Куплено " << count << "штук товара за " << total << " рублей" << std::endl;
-    } else if (n == 1) {
+    if (n == 1) {
         std::cout << "Куплен товар за " << total << " рублей" << std::endl;
-    } else {
-        break
+    } else ) {
+        std::cout << "Куплено " << count << "штук товара за " << total << " рублей" << std::endl;
     }
 return 0;
 }
