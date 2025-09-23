@@ -14,9 +14,9 @@ int main() {
         } else {
             std::cin >> w1 >> p >> w2 >> k >> w3;
         }
-    }
     total += k * p;
     count += k;
+    }
     if (n == 1) {
         std::cout << "Куплен товар за " << total << " рублей" << std::endl;
     } else {
