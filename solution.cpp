@@ -7,12 +7,12 @@ int main() {
     int count = 0;
     for(int i = 0; i < n; i++) {
         int k, p;
-        std::string w4, w5, w6;
-        std::cin >> w4 >> w5 >> w6 >> k >> p;
+        std::string w1, w2, w3;
+        std::cin >> w1 >> w2 >> w3 >> k >> p;
         if (n == 1) {
-            std::cin >> w4 >> p >> w5;
+            std::cin >> w1 >> p >> w2;
         } else {
-            std::cin >> w4 >> p >> w5 >> k >> w6;
+            std::cin >> w1 >> p >> w2 >> k >> w3;
         }
     total += k * p;
     count += k;
@@ -21,5 +21,6 @@ int main() {
         std::cout << "Куплен товар за " << total << " рублей" << std::endl;
     } else {
         std::cout << "Куплено " << count << "штук товара за " << total << " рублей" << std::endl;
-}
+    }
 return 0;
+}
