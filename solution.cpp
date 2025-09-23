@@ -3,7 +3,7 @@
 int main() {
   int n;
   std::string w1, w2, w3, w7, w8, w9, w10;
-  std::cin >> w1 >> w2 >> w3 >> w7 >> w8 >> w9 >> n;
+  std::cin >> w1 >> w2 >> w3 >> w7 >> w8 >> w9 >> w10 >> n;
   int total = 0;
   int count = 0;
   for(int i = 0; i < n; i++) {
