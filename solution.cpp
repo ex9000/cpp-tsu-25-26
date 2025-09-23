@@ -6,7 +6,7 @@ int main() {
     std::cin >> w1 >> w2 >> w3 >> n;
     int total = 0;
     int count = 0;
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         int k, p;
         std::string w1, w2, w3;
         if (k == 1) {
