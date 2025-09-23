@@ -6,9 +6,9 @@ int main() {
   std::cin >> w1 >> w2 >> w3 >> n;
   int total = 0;
   int count = 0;
-  for(int i; i < n, i++) {
+  for(int i; i < n; i++) {
     int k, p;
-    std::string w1, w2, w3;
+    std::string w1, w2, w3, line;
     std::cin >> w1 >> w2 >> w3;
     std::getline(std::cin, line);
     if (n == 1) {
@@ -20,9 +20,9 @@ int main() {
     count += k;
   }
   if (n == 1) {
-    std::cout << w1 << total << w2 << endl;
+    std::cout << w1 << total << w2 << std::endl;
   } else {
-    std::cout << w1 << count << w2 << total << w3 << endl;
+    std::cout << w1 << count << w2 << total << w3 << std::endl;
   }
   return 0;
 }
