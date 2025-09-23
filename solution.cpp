@@ -9,7 +9,6 @@ int main() {
     for(int i = 0; i < n; i++) {
         int k, p;
         std::string w1, w2, w3;
-        std::cin >> w1 >> w2 >> w3 >> k >> p;
         if (n == 1) {
             std::cin >> w1 >> p >> w2;
         } else {
