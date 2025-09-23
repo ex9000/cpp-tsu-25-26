@@ -19,8 +19,10 @@ int main() {
     }
     if (n > 1) {
         std::cout << "Куплено " << count << "штук товара за " << total << " рублей" << std::endl;
-    } else {
+    } else if (n == 1) {
         std::cout << "Куплен товар за " << total << " рублей" << std::endl;
+    } else {
+        break
     }
 return 0;
 }
