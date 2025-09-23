@@ -18,7 +18,7 @@ int main() {
     count += k;
     }
     if (n == 1) {
-        std::cout << "Куплен товар за " << total << " рублей" << std::endl;
+        std::cout << "Куплен товар за " << p << " рублей" << std::endl;
     } else {
         std::cout << "Куплено " << count << "штук товара за " << total << " рублей" << std::endl;
     }
