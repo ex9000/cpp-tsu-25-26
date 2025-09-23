@@ -23,9 +23,9 @@ int main() {
         count += quantity;
     }
     if (n == 1) {
-        std::cout << "Куплен товар за " << price << " рублей" << std::endl;
+        std::cout << w1 << price << w2 << std::endl;
     } else {
-        std::cout << "Куплено " << k << " штук товара за " << total << " рублей" << std::endl;
+        std::cout << w1 << k << w2 << total << w3 << std::endl;
     }
     return 0;
 }
