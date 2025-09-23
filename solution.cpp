@@ -1,32 +1,25 @@
 #include <iostream>
 #include <string>
 int main() {
-    std::string w1, w2, w3;
     int n;
-    std::cin >> w1 >> w2 >> w3 >> n; 
-    int total_sum = 0;
-    int total_count = 0;
-    for (int i = 0; i < n; i++) {
-        int quantity = 1;
-        int price = 0;
-        std::string word;
-        while (true) {
-            std::cin >> word;
-            if (word == "за" || word == "по") break;
+    std::cin >> n;
+    int total = 0;
+    int count = 0;
+    for(int i = 0; i < n; i++) {
+        int k, p;
+        std::string w4, w5, w6;
+        std::cin >> w4 >> w5 >> w6 >> k >> p;
+        if (n == 1) {
+            std::cin >> w4 >> p >> w5;
+        } else {
+            std::cin >> w4 >> p >> w5 >> k >> w6;
         }
-        if (std::cin >> word) {
-            if (word == ":") {
-                std::cin >> quantity >> word; // quantity и "штуки"
-            } else {
-            }
-        }
-        total_sum += price * quantity;
-        total_count += quantity;
+    total += k * p;
+    count += k;
     }
-    if (total_count == 1) {
-        std::cout << "Куплен товар за " << total_sum << " рублей" << endl;
+    if (n == 1) {
+        std::cout << "Куплен товар за " << total << " рублей" << std::endl;
     } else {
-        std::cout << "Куплено " << total_count << " штук товара за " << total_sum << " рублей" <<endl;
-    }
-    return 0;
+        std::cout << "Куплено " << count << "штук товара за " << total << " рублей" << std::endl;
 }
+return 0;
