@@ -2,7 +2,7 @@
 #include <string>
 int main() {
   int n;
-  std::string w1, w2, w3, w7, w8, w9;
+  std::string w1, w2, w3, w7, w8, w9, w10;
   std::cin >> w1 >> w2 >> w3 >> w7 >> w8 >> w9 >> n;
   int total = 0;
   int count = 0;
@@ -22,7 +22,7 @@ int main() {
   if (n == 1) {
     std::cout << w7 << total << w8 << std::endl;
   } else {
-    std::cout << w7 << count << w8 << total << w9 << std::endl;
+    std::cout << w7 << count << w8 << w9 << total << w10 << std::endl;
   }
   return 0;
 }
