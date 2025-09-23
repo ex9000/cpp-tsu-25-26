@@ -2,7 +2,7 @@
 #include <string>
 int main() {
     int n;
-    std::string w1, w2, w3
+    std::string w1, w2, w3;
     std::cin >> w1 >> w2 >> w3 >> n;
     int total = 0;
     int count = 0;
