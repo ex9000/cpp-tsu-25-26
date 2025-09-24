@@ -1,5 +1,19 @@
 #include <iostream>
-int main() {
-  std::cout << 700 << std::endl;
-  return 0;
+
+int main()
+{
+    int N = 0;
+    std::cin >> N;
+
+    int sum = 0;
+
+    for (int i = 0; i < N; i++) {
+        int k, p;
+        std::cin >> k >> p;
+        sum += k * p;
+    }
+
+    std::cout << sum;
+
+    return 0;
 }
