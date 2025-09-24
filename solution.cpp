@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -22,14 +22,14 @@ int main()
             string lastRead = "";
             cin >> lastRead;
 
-            if (lastRead == "çà") {
+            if (lastRead == "Ð·Ð°") {
                 int price;
                 cin >> price;
                 sum += price;
                 count++;
                 break;
             }
-            else if (lastRead == "ïî") {
+            else if (lastRead == "Ð¿Ð¾") {
                 int price;
                 cin >> price;
                 cin >> lastRead;
@@ -43,10 +43,10 @@ int main()
     }
 
     if (count == 1) {
-        cout << "Êóïëåí òîâàð çà " << sum << " ðóáëåé";
+        cout << "Â ÐšÑƒÐ¿Ð»ÐµÐ½ Ñ‚Ð¾Ð²Ð°Ñ€ Ð·Ð° " << sum << " Ñ€ÑƒÐ±Ð»ÐµÐ¹";
     }
     else {
-        cout << "Êóïëåíî " << count << " øòóê òîâàðà çà " << sum << " ðóáëåé";
+        cout << "Â ÐšÑƒÐ¿Ð»ÐµÐ½Ð¾ " << count << " ÑˆÑ‚ÑƒÐº Ñ‚Ð¾Ð²Ð°Ñ€Ð° Ð·Ð° " << sum << " Ñ€ÑƒÐ±Ð»ÐµÐ¹";
     }
 
     return 0;
