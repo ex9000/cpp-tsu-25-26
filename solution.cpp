@@ -41,10 +41,10 @@ int main()
     }
 
     if (count == 1) {
-        std::cout << " Куплен товар за " << sum << " рублей" << std::endl;
+        std::cout << "Куплен товар за " << sum << " рублей" << std::endl;
     }
     else {
-        std::cout << " Куплено " << count << " штук товара за " << sum << " рублей" << std::endl;
+        std::cout << "Куплено " << count << " штук товара за " << sum << " рублей" << std::endl;
     }
 
     return 0;
