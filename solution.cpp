@@ -1,16 +1,14 @@
-﻿﻿#include <iostream>
-
-using namespace std;
+﻿#include <iostream>
 
 int main()
 {
     for (int i = 0; i < 3; i++) {
-        string a;
-        cin >> a;
+        std::string a;
+        std::cin >> a;
     }
 
     int N;
-    cin >> N;
+    std::cin >> N;
 
     int sum = 0;
     int count = 0;
@@ -19,22 +17,22 @@ int main()
     {
         while (true)
         {
-            string lastRead = "";
-            cin >> lastRead;
+            std::string lastRead = "";
+            std::cin >> lastRead;
 
             if (lastRead == "за") {
                 int price;
-                cin >> price;
+                std::cin >> price;
                 sum += price;
                 count++;
                 break;
             }
             else if (lastRead == "по") {
                 int price;
-                cin >> price;
-                cin >> lastRead;
+                std::cin >> price;
+                std::cin >> lastRead;
                 int amount;
-                cin >> amount;
+                std::cin >> amount;
                 sum += price * amount;
                 count += amount;
                 break;
@@ -43,10 +41,10 @@ int main()
     }
 
     if (count == 1) {
-        cout << " Куплен товар за " << sum << " рублей" << endl;
+        std::cout << " Куплен товар за " << sum << " рублей" << std::endl;
     }
     else {
-        cout << " Куплено " << count << " штук товара за " << sum << " рублей" << endl;
+        std::cout << " Куплено " << count << " штук товара за " << sum << " рублей" << std::endl;
     }
 
     return 0;
