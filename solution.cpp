@@ -3,61 +3,42 @@
 using namespace std;
 
 int main() {
-    string z;
-    getline(cin,z);
+    string s;
+    int n;
 
-    int pos = z.find(':');
-    int n = stoi(z.substr(pos + 1));
-    
+    cin >> s >> s >> s >> n;
+
     int TSum = 0;
     int TCount = 0;
 
     for (int i = 0; i < n; i++) {
-        string line;
-        getline(cin, line);
-
-        int k = 1;
-        int p = 0;
-
-        int rubPos = line.find("ру");
-        if (rubPos != string::npos) {
-            string priceStr = "";
-            int j = rubPos - 1;
-            while (j >= 0 and ((line[j] >= '0' and line[j] <= '9') or line[j] == ' ')) {
-                if (line[j] >= '0' and line[j] <= '9') {
-                    priceStr = line[j] + priceStr;
-                }
-                j--;
+        while (cin >> s) {
+            if (s == "за") {
+                int price;
+                cin >> price;
+                cin >> s;
+                totalSum += price;
+                totalCount += 1;
+                break;
             }
-            if (!priceStr.empty()) {
-                p = stoi(priceStr);
-            }
-        }
-
-        if (line.find("по") != string::npos) {
-            int colonPos = line.find(':');
-            if (colonPos != string::npos) {
-                string countStr = "";
-                for (int j = colonPos + 1; j < line.size(); j++) {
-                    if (line[j] >= '0' and line[j] <= '9') {
-                        countStr += line[j];
-                    }
-                }
-                if (!countStr.empty()) {
-                    k = stoi(countStr);
-                }
+            else if (s == "по") {
+                int p, k;
+                cin >> price;
+                cin >> s;
+                cin >> count;
+                cin >> s;
+                TSum += price * count;
+                TCount += count;
+                break;
             }
         }
-
-        TSum += k * p;
-        TCount += k;
     }
 
     if (TCount == 1) {
-        cout << "Куплен товар за " << TSum << " рублей" << endl;
+        cout << "Куплен товар за " << TSum << " рублей\n";
     } else {
-        cout << "Куплено " << TCount << " штук товара за " << TSum << " рублей" << endl;
+        cout << "Куплено " << TCount << " штук товара за " << TSum << " рублей\n";
     }
-    
+
     return 0;
 }
