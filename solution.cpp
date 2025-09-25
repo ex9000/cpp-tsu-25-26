@@ -13,7 +13,7 @@ int main()
         sum += k * p;
     }
 
-    std::cout << sum;
+    std::cout << sum << std::endl;
 
     return 0;
 }
