@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿﻿#include <iostream>
 
 using namespace std;
 
@@ -43,10 +43,10 @@ int main()
     }
 
     if (count == 1) {
-        cout << " Куплен товар за " << sum << " рублей";
+        cout << " Куплен товар за " << sum << " рублей" << endl;
     }
     else {
-        cout << " Куплено " << count << " штук товара за " << sum << " рублей";
+        cout << " Куплено " << count << " штук товара за " << sum << " рублей" << endl;
     }
 
     return 0;
