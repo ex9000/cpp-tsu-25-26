@@ -17,8 +17,8 @@ int main() {
                 int price;
                 cin >> price;
                 cin >> s;
-                totalSum += price;
-                totalCount += 1;
+                TSum += price;
+                TCount += 1;
                 break;
             }
             else if (s == "по") {
