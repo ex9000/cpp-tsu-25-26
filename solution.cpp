@@ -22,7 +22,7 @@ int main() {
                 break;
             }
             else if (s == "по") {
-                int p, k;
+                int price, count;
                 cin >> price;
                 cin >> s;
                 cin >> count;
