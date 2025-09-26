@@ -5,28 +5,33 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    double total = 0;
+    cin.ignore();
+
+    cout << "Позиций в чеке: " << n << endl
+        
     int total_items = 0;
+    int total_price = 0;
 
     for (int i = 0; i < n; i++) {
-        string s;
-        int k;
-        double p;
+        string name1, name2, name3, temp;
+        int k, price;
 
-        cin >> s >> k >> s >> p >> s;
+        cin >> name1;
+        cin >> name2;
+        cin >> name3;
+        cin >> temp;
+        cin >> price;
+        cin >> temp;
 
-        total += k * p;
+        k = 1;
+
         total_items += k;
+        total_price += k * price;
 
-        if (k == 1) {
-            cout << "Куплен товар за " << p << " рублей" << endl;
-        } else {
-            cout << "Куплен товар в количестве " << k << " штук за " << p * k << " рублей" << endl;
-        }
+        cout << name1 << " " << name2 << " " << name3 << " за " << price << " рублей" << endl;
     }
 
-    cout << "Куплено " << total_items << " штук товара за " << total << " рублей" << endl;
+    cout << "Куплено " << total_items << " штук товара за " << total_price << " рублей" << endl;
 
     return 0;
 }
-
