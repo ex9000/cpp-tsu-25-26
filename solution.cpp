@@ -4,11 +4,11 @@ int main() {
     int n;
     std::cin >> n;
 
-    double summa = 0.0;
+    int summa = 0;
 
     for (int i = 0; i < n; ++i) {
         int count;
-        double price;
+        int price;
         std::cin >> count >> price;
         summa += count * price;
     }
