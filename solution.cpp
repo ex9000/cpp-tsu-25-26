@@ -7,7 +7,7 @@ int main() {
     cin >> n;
     cin.ignore();
 
-    cout << "Позиций в чеке: " << n << endl
+    cout << "Позиций в чеке: " << n << endl;
         
     int total_items = 0;
     int total_price = 0;
