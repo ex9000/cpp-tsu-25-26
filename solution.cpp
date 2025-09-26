@@ -29,7 +29,7 @@ int main() {
     }
     
     bubblesort(arr, n);
-    cout << arr[n/2] << endl;
+    cout << arr[(n-1)/2] << endl;
     
     return 0;
 }
