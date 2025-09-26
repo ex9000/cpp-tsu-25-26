@@ -8,7 +8,7 @@ int main()
     long long int n;
     cin >> n;
     string s;
-    long long int a[n] = {};
+    long long int a[10001] = {};
     long long int i = 0;
     while (i < n) {
         cin >> s;
