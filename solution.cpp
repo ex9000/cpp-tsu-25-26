@@ -28,7 +28,7 @@ int main() {
       total_price += quantity * price;
   }
   if (total_items == 1) {
-      std::cout << "Куплен единственный товар за " << total_price << " рублей" << std::endl;
+      std::cout << "Куплен товар за " << total_price << " рублей" << std::endl;
   } 
   else {
       std::cout << "Куплено " << total_items << " штук товара за " << total_price << " рублей" << std::endl;
