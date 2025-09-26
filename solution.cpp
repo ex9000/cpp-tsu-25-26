@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 int main() {
   int main() {
     string first_line;
