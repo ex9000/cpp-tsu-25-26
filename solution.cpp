@@ -1,5 +1,18 @@
 #include <iostream>
+using namespace std;
+
 int main() {
-  std::cout << 700 << std::endl;
-  return 0;
+    int quantity;
+    cin >> quantity;
+    
+    int sum = 0;
+    
+    for(int n = 0; n < quantity; n++) {
+        int k, price;
+        cin >> k; 
+        cin >> price;
+        sum += k * price;
+    }
+    cout << sum << endl;
+    return 0;
 }
