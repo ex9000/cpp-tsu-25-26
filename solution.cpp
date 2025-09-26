@@ -1,19 +1,19 @@
 #include <iostream>
 
 int main() {
-    int сount;
-    std::cout << "Vvesti kol-vo tovarov: ";
-    std::cin >> сount; 
+    int n;
+    std::cin >> n;
 
-    int summa = 0;
-    std::cout << "Vvesti tovar(kol-vo price):\n";
-    for (int i = 0; i < сount; ++i) {
-        int count_tovarov, price;
-        std::cin >> count_tovarov >> price;
-        summa += count_tovarov * price;
+    double summa = 0.0;
+
+    for (int i = 0; i < n; ++i) {
+        int count;
+        double price;
+        std::cin >> count >> price;
+        summa += count * price;
     }
 
-    std::cout << summa << std::endl;
+    std::cout << "Сумма всех товаров: " << summa << std::endl;
 
     return 0;
 }
