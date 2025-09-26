@@ -1,16 +1,17 @@
 #include <string>
 #include <iostream>
 using namespace std;
-int main(){
-    string buffer;
-    cin >> buffer;
-    cin >> buffer;
-    cin >> buffer;
+int main()
+{
+    string s;
+    cin >> s;
+    cin >> s;
+    cin >> s;
     
     int n;
     cin >> n;
     
-    int product = 0;
+    int goods = 0;
     int sum = 0;
     
     for(int q=0;q<n;q++){
@@ -32,12 +33,13 @@ int main(){
         cin >> word;
     }
     sum += number*price;
-    product += number;
+    goods += number;
     }
-    if(product == 1){
+    if(goods == 1){
         cout<<"Куплен товар за "<<sum<<" рублей"<<endl;
     }else{
-        cout<<"Куплено "<<product <<" штук товара за "<<sum<<" рублей"<<endl;
+        cout<<"Куплено "<<goods<<" штук товара за "<<sum<<" рублей"<<endl;
     }
+
     return 0;
 }
