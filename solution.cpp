@@ -35,7 +35,7 @@ int main()
         }
     }
     
-    cout << a[(n-1)/2] << endl;
+    cout << a[(n-1)/2];
     
     return 0;
 }
