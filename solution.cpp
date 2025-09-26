@@ -1,12 +1,41 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
-int main() {
-  int n;
-  cin >> n;
-  if (n == 1) {
-    cout << 500 << endl;
-  } else {
-    cout << 20 << endl;
-  }
-  return 0;
+
+int main()
+{
+    long long int n;
+    cin >> n;
+    string s;
+    long long int a[n] = {};
+    long long int i = 0;
+    while (i < n) {
+        cin >> s;
+        
+        if((s[0] >= '0') and (s[0] <= '9')) {
+            long long int k = 0;
+            long long int salarie = 0;
+            while (s[k] != '\0') {
+                salarie = salarie * 10 + s[k] - '0';
+                k++;
+            }
+            a[i] = salarie;
+            i++;
+        }
+    }
+    
+    for (long long int i = 0; i<n; i++) {
+        for (long long int j = 0; j<n-i; j++) {
+            if (a[j] > a[j+1]) {
+                long long int c = a[j];
+                a[j] = a[j+1];
+                a[j+1] = c;
+            }
+        }
+    }
+    
+    cout << a[n/2];
+    
+    return 0;
 }
