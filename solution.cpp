@@ -8,21 +8,21 @@ int main()
     long long int n;
     cin >> n;
     string s;
+    getline(cin, s);
     long long int a[10001] = {};
-    long long int i = 0;
-    while (i < n) {
-        cin >> s;
-        
-        if((s[0] >= '0') and (s[0] <= '9')) {
-            long long int k = 0;
-            long long int salarie = 0;
-            while (s[k] != '\0') {
-                salarie = salarie * 10 + s[k] - '0';
-                k++;
-            }
-            a[i] = salarie;
-            i++;
+    for(long long int i = 0; i < n; i++) {
+        getline(cin, s);
+        long long int j = s.size() - 1;
+        while (s[j] != ' ') {
+            j--;
         }
+        j++;
+        long long int salarie = 0;
+        while(j < s.size()) {
+            salarie = salarie * 10 + s[j] - '0';
+            j++;
+        }
+        a[i] = salarie;
     }
     
     for (long long int i = 0; i<n-1; i++) {
