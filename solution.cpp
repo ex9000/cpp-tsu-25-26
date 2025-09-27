@@ -1,5 +1,15 @@
 #include <iostream>
-int main() {
-  std::cout << 700 << std::endl;
-  return 0;
+int main() 
+{
+    long long int res = 0;
+    int a;
+    int pos;
+    int n;
+    std::cin >> n;
+    for(int i = 1; i < n + 1; i++) {
+      std::cin >> a >> pos; 
+      res = res + a * pos;
+    }
+    std::cout << res << std::endl;
+    return 0;
 }
