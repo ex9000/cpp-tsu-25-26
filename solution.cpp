@@ -15,7 +15,7 @@ int main() {
         int k = 1; 
         std::cin >> p;
         if (word == "по") {
-            std::cin >> word >> k >> word;
+            std::cin >> k >> word;
         } else {
         }
         total += p * k;
