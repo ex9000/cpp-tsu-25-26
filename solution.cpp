@@ -7,23 +7,21 @@ int main() {
     int total = 0;
     int count = 0;
     for (int i = 0; i < n; i++) {
-        int k = 1, p = 0;  
         std::string word;
-        while (true) {
-            std::cin >> word;
-            if (word == "за") {
-                std::cin >> p >> word; 
-                k = 1;  
-                break;
-            } else if (word == "по") {
-                std::cin >> p >> word >> word >> k >> word; 
-                break;
-            }
+        while (std::cin >> word) {
+            if (word == "за" || word == "по") break;
         }
-        total += k * p;
+        int p = 0;
+        int k = 1; 
+        std::cin >> p;
+        if (word == "по") {
+            std::cin >> word >> k >> word;
+        } else {
+        }
+        total += p * k;
         count += k;
     }
-    if (n == 1) {
+    if (count == 1) {
         std::cout << "Куплен товар за " << total << " рублей" << std::endl;
     } else {
         std::cout << "Куплено " << count << " штук товара за " << total << " рублей" << std::endl;
