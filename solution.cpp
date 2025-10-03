@@ -1,75 +1,80 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <cctype>
 using namespace std;
 
+// Удаляет пунктуацию с конца слова
+string cleanWord(const string& word) {
+    if (!word.empty() && ispunct(word.back())) {
+        return word.substr(0, word.size() - 1);
+    }
+    return word;
+}
+
+// Проверка, является ли строка числом
 bool isNumber(const string& s) {
     for (char c : s) {
         if (!isdigit(c)) return false;
     }
-    return true;
+    return !s.empty();
 }
 
 int main() {
     string line;
     int n;
 
-    // Считываем первую строку и извлекаем количество позиций
+    // Считываем первую строку
     getline(cin, line);
-    size_t pos = line.find(":");
+    size_t pos = line.find(':');
     if (pos == string::npos) {
-        cerr << "Неверный формат первой строки!" << endl;
+        cerr << "Ошибка: неверный формат первой строки." << endl;
         return 1;
     }
+
+    // Извлекаем количество позиций
     n = stoi(line.substr(pos + 1));
 
-    long long total_sum = 0;
-    int total_count = 0;
+    long long totalSum = 0;
+    int totalCount = 0;
 
     for (int i = 0; i < n; ++i) {
         getline(cin, line);
-
-        int price = -1;
-        int quantity = -1;
-
         istringstream iss(line);
-        string word;
-        string prev = "", prevprev = "";
+
+        string word, prev = "", prevPrev = "";
+        int price = -1, quantity = -1;
 
         while (iss >> word) {
-            // Удалим возможные символы типа ':' или ',' на конце
-            if (!word.empty() && ispunct(word.back())) {
-                word.pop_back();
-            }
+            word = cleanWord(word);  // Удалим знаки препинания
 
-            // Проверка на цену — перед словом 'рубл'
+            // Найдена цена
             if ((word.find("рубл") != string::npos) && isNumber(prev)) {
                 price = stoi(prev);
             }
 
-            // Проверка на количество — перед словом 'штук'
-            if ((word.find("штук") != string::npos || word.find("штук") != string::npos) && isNumber(prev)) {
+            // Найдено количество
+            if ((word.find("штук") != string::npos || word.find("штуки") != string::npos) && isNumber(prev)) {
                 quantity = stoi(prev);
             }
 
-            // Обновляем предыдущие слова
-            prevprev = prev;
+            prevPrev = prev;
             prev = word;
         }
 
         if (price != -1 && quantity != -1) {
-            total_sum += static_cast<long long>(price) * quantity;
-            total_count += quantity;
+            totalSum += static_cast<long long>(price) * quantity;
+            totalCount += quantity;
         } else {
-            cerr << "Ошибка обработки строки: " << line << endl;
+            cerr << "Ошибка разбора строки: " << line << endl;
         }
     }
 
     // Вывод результата
-    if (total_count == 1) {
-        cout << "Куплен единственный товар, сумма: " << total_sum << " рублей" << endl;
+    if (totalCount == 1) {
+        cout << "Куплен единственный товар, сумма: " << totalSum << " рублей" << endl;
     } else {
-        cout << "Куплено " << total_count << " штук товара, сумма: " << total_sum << " рублей" << endl;
+        cout << "Куплено " << totalCount << " штук товара, сумма: " << totalSum << " рублей" << endl;
     }
 
     return 0;
