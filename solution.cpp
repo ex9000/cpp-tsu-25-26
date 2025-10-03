@@ -4,7 +4,7 @@
 #include <cctype>
 using namespace std;
 
-// Удаляет пунктуацию с конца слова
+// Удалить пунктуацию с конца слова, если есть
 string cleanWord(const string& word) {
     if (!word.empty() && ispunct(word.back())) {
         return word.substr(0, word.size() - 1);
@@ -12,7 +12,7 @@ string cleanWord(const string& word) {
     return word;
 }
 
-// Проверка, является ли строка числом
+// Проверка: строка — это число?
 bool isNumber(const string& s) {
     for (char c : s) {
         if (!isdigit(c)) return false;
@@ -28,11 +28,10 @@ int main() {
     getline(cin, line);
     size_t pos = line.find(':');
     if (pos == string::npos) {
-        cerr << "Ошибка: неверный формат первой строки." << endl;
+        cerr << "Неверный формат первой строки!" << endl;
         return 1;
     }
 
-    // Извлекаем количество позиций
     n = stoi(line.substr(pos + 1));
 
     long long totalSum = 0;
@@ -40,20 +39,22 @@ int main() {
 
     for (int i = 0; i < n; ++i) {
         getline(cin, line);
-        istringstream iss(line);
 
+        istringstream iss(line);
         string word, prev = "", prevPrev = "";
-        int price = -1, quantity = -1;
+
+        int price = -1;
+        int quantity = 1; // По умолчанию 1 (если не указано явно)
 
         while (iss >> word) {
-            word = cleanWord(word);  // Удалим знаки препинания
+            word = cleanWord(word);
 
-            // Найдена цена
-            if ((word.find("рубл") != string::npos) && isNumber(prev)) {
+            // Если нашли слово "рубл" и перед ним было число — это цена
+            if (word.find("рубл") != string::npos && isNumber(prev)) {
                 price = stoi(prev);
             }
 
-            // Найдено количество
+            // Если нашли слово "штук"/"штуки" и перед ним было число — это количество
             if ((word.find("штук") != string::npos || word.find("штуки") != string::npos) && isNumber(prev)) {
                 quantity = stoi(prev);
             }
@@ -62,7 +63,7 @@ int main() {
             prev = word;
         }
 
-        if (price != -1 && quantity != -1) {
+        if (price != -1) {
             totalSum += static_cast<long long>(price) * quantity;
             totalCount += quantity;
         } else {
@@ -72,9 +73,9 @@ int main() {
 
     // Вывод результата
     if (totalCount == 1) {
-        cout << "Куплен единственный товар, сумма: " << totalSum << " рублей" << endl;
+        cout << "Куплен товар за " << totalSum << " рублей" << endl;
     } else {
-        cout << "Куплено " << totalCount << " штук товара, сумма: " << totalSum << " рублей" << endl;
+        cout << "Куплено " << totalCount << " штук товара за " << totalSum << " рублей" << endl;
     }
 
     return 0;
