@@ -5,7 +5,7 @@
 #include <algorithm>
 using namespace std;
 
-void bubble_sort(vector<float>& arr){
+void bubble_sort(vector<long long>& arr){
     
     for(int i = 0; i < arr.size() - 1; i++){
         for(int j = 0; j < arr.size() - i - 1; j++){
@@ -17,7 +17,7 @@ void bubble_sort(vector<float>& arr){
 }
 
 int main(){
-    vector<float> words;
+    vector<long long> words;
     string line;
     
     getline(cin, line);
@@ -34,11 +34,11 @@ int main(){
         while(lineStream >> word){
             lastWord = word;
         }
-       words.push_back(stof(lastWord)); 
+       words.push_back(stoll(lastWord)); 
     }
     bubble_sort(words);
     
-    float res = words[n / 2];
+    long long res = words[n / 2];
     cout << res << endl;
     
     return 0;
