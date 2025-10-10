@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+
 int main() {
-    cout << "ola" << endl;
+    cout << "Ola!" << endl;
+    return 0;
 }
