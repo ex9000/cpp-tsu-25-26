@@ -10,8 +10,8 @@ int main() {
         cin >> quantity >> price;
         summ += quantity * price;
         n -= 1;
-    }
+    };
     
     cout << summ;
     return 0;
-}
+};
