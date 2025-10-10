@@ -1,5 +1,17 @@
 #include <iostream>
+
+using namespace std;
+
 int main() {
-  std::cout << 700 << std::endl;
-  return 0;
+    int n, quantity, price, summ; 
+    cin >> n;
+    summ = 0;
+    while (n > 0) {
+        cin >> quantity >> price;
+        summ += quantity * price;
+        n -= 1;
+    }
+    
+    cout << summ;
+    return 0;
 }
