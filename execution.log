@@ -1,0 +1,91 @@
+Script started on 2025-10-10 21:08:55+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mg++ hi.cpp[27mg++ hi.cpp
+[?2004l[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7m./a.out[27m./a.out
+[?2004lhi
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mls -halp[27mls -halp
+[?2004ltotal 56K
+drwxr-xr-x 3 gasich gasich 4.0K Oct 10 21:09 [0m[01;34m.[0m/
+drwxr-x--- 4 gasich gasich 4.0K Oct 10 21:02 [01;34m..[0m/
+drwxr-xr-x 8 gasich gasich 4.0K Oct 10 21:02 [01;34m.git[0m/
+-rw-r--r-- 1 gasich gasich   28 Oct 10 21:02 .gitignore
+-rw-r--r-- 1 gasich gasich  168 Oct 10 21:02 CMakeLists.txt
+-rw-r--r-- 1 gasich gasich 3.9K Oct 10 21:02 README.md
+-rwxr-xr-x 1 gasich gasich  17K Oct 10 21:09 [01;32ma.out[0m
+-rw-r--r-- 1 gasich gasich    0 Oct 10 21:08 execution.log
+-rw-r--r-- 1 gasich gasich   82 Oct 10 21:02 hi.cpp
+-rw-r--r-- 1 gasich gasich  266 Oct 10 21:02 names.cpp
+-rw-r--r-- 1 gasich gasich   83 Oct 10 21:02 ola.cpp
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mg++ ola.cpp -o ola.exe[27mg++ ola.cpp -o ola.exe
+[?2004l[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7m./ola.exe[27m./ola.exe
+[?2004lola
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mmkdir -p build[27mmkdir -p build
+[?2004l[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mmv a.out ola.exe build/[27mmv a.out ola.exe build/
+[?2004l[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ tree
+[?2004l[01;34m.[0m
+├── CMakeLists.txt
+├── README.md
+├── [01;34mbuild[0m
+│   ├── [01;32ma.out[0m
+│   └── [01;32mola.exe[0m
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+2 directories, 8 files
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mnm build/ola.exe | grep " T "[27mnm build/ola.exe | grep " T "
+[?2004l00000000000011a4[01;31m[K T [m[K_fini
+0000000000001000[01;31m[K T [m[K_init
+0000000000001080[01;31m[K T [m[K_start
+0000000000001169[01;31m[K T [m[Kmain
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mclang++ ola.cpp -o build/ola_clang.exe[27mclang++ ola.cpp -o build/ola_clang.exe
+[?2004l[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7m./build/ola_clang.exe[27m./build/ola_clang.exe
+[?2004lola
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mnm build/ola_clang.exe | grep " T "[27mnm build/ola_clang.exe | grep " T "
+[?2004l000000000000117c[01;31m[K T [m[K_fini
+0000000000001000[01;31m[K T [m[K_init
+0000000000001060[01;31m[K T [m[K_start
+0000000000001150[01;31m[K T [m[Kmain
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mclang++ names.cpp -o build/names.exe[27mclang++ names.cpp -o build/names.exe
+[?2004l[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7m./build/names.exe[27m./build/names.exe
+[?2004l[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mnm build/names.exe | grep " T "[27mnm build/names.exe | grep " T "
+[?2004l0000000000001180[01;31m[K T [m[K_Z3barv
+0000000000001160[01;31m[K T [m[K_Z3foodd
+0000000000001140[01;31m[K T [m[K_Z3foov
+0000000000001150[01;31m[K T [m[K_Z3foox
+000000000000119c[01;31m[K T [m[K_fini
+0000000000001000[01;31m[K T [m[K_init
+0000000000001040[01;31m[K T [m[K_start
+0000000000001190[01;31m[K T [m[Kbar
+0000000000001130[01;31m[K T [m[Kmain
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mclang++ names.cpp -o build/names.exe[27mclang++ names.cpp -o build/names.exe
+[?2004l[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mtree[27mtree
+[?2004l[01;34m.[0m
+├── CMakeLists.txt
+├── README.md
+├── [01;34mbuild[0m
+│   ├── [01;32ma.out[0m
+│   ├── [01;32mnames.exe[0m
+│   ├── [01;32mola.exe[0m
+│   └── [01;32mola_clang.exe[0m
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+2 directories, 10 files
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mrm -r build[27mrm -r build
+[?2004l[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ [7mtree[27mtree
+[?2004l[01;34m.[0m
+├── CMakeLists.txt
+├── README.md
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+1 directory, 6 files
+[?2004h]0;gasich@LAPTOP-JU9I7U0S: ~/cpp-tsu-25-26[01;32mgasich@LAPTOP-JU9I7U0S[00m:[01;34m~/cpp-tsu-25-26[00m$ exit
+[?2004lexit
+
+Script done on 2025-10-10 21:11:42+03:00 [COMMAND_EXIT_CODE="0"]
