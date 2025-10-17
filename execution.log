@@ -1,0 +1,99 @@
+Hi!
+total 64K
+drwxr-xr-x 4 lena lena 4.0K Oct 17 23:59 ./
+drwxr-x--- 5 lena lena 4.0K Oct 17 23:53 ../
+drwxr-xr-x 8 lena lena 4.0K Oct 17 23:52 .git/
+-rw-r--r-- 1 lena lena   28 Oct 17 23:52 .gitignore
+-rw-r--r-- 1 lena lena  168 Oct 17 23:52 CMakeLists.txt
+-rw-r--r-- 1 lena lena 3.9K Oct 17 23:52 README.md
+-rwxr-xr-x 1 lena lena  17K Oct 17 23:59 a.out
+drwxr-xr-x 2 lena lena 4.0K Oct 17 23:53 build/
+-rw-r--r-- 1 lena lena    5 Oct 18 00:00 execution.log
+-rw-r--r-- 1 lena lena   98 Oct 17 23:52 hi.cpp
+-rw-r--r-- 1 lena lena  239 Oct 17 23:52 names.cpp
+-rw-r--r-- 1 lena lena   99 Oct 17 23:52 ola.cpp
+total 64K
+drwxr-xr-x 4 lena lena 4.0K Oct 17 23:59 ./
+drwxr-x--- 5 lena lena 4.0K Oct 17 23:53 ../
+drwxr-xr-x 8 lena lena 4.0K Oct 17 23:52 .git/
+-rw-r--r-- 1 lena lena   28 Oct 17 23:52 .gitignore
+-rw-r--r-- 1 lena lena  168 Oct 17 23:52 CMakeLists.txt
+-rw-r--r-- 1 lena lena 3.9K Oct 17 23:52 README.md
+-rwxr-xr-x 1 lena lena  17K Oct 17 23:59 a.out
+drwxr-xr-x 2 lena lena 4.0K Oct 17 23:53 build/
+-rw-r--r-- 1 lena lena  608 Oct 18 00:00 execution.log
+-rw-r--r-- 1 lena lena   98 Oct 17 23:52 hi.cpp
+-rw-r--r-- 1 lena lena  239 Oct 17 23:52 names.cpp
+-rw-r--r-- 1 lena lena   99 Oct 17 23:52 ola.cpp
+Ola!
+.
+├── CMakeLists.txt
+├── README.md
+├── build
+│   ├── a.out
+│   ├── names.exe
+│   ├── ola.exe
+│   └── ola_clang.exe
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+2 directories, 10 files
+00000000000011a4 T _fini
+0000000000001000 T _init
+0000000000001080 T _start
+0000000000001169 T main
+Ola!
+000000000000118c T _fini
+0000000000001000 T _init
+0000000000001060 T _start
+0000000000001150 T main
+names.cpp:14:7: error: declaration of 'bar' has a different language linkage
+   14 |  void bar() {}
+      |       ^
+names.cpp:8:6: note: previous definition is here
+    8 | void bar() {}
+      |      ^
+1 error generated.
+0000000000001190 T _Z3bari
+00000000000011f8 T _fini
+0000000000001000 T _init
+0000000000001070 T _start
+0000000000001160 T bar
+00000000000011d0 T main
+.
+├── CMakeLists.txt
+├── README.md
+├── build
+│   ├── a.out
+│   ├── names.exe
+│   ├── names_error.exe
+│   ├── ola.exe
+│   └── ola_clang.exe
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+2 directories, 11 files
+.
+├── CMakeLists.txt
+├── README.md
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+1 directory, 6 files
+total 40K
+drwxr-xr-x 3 lena lena 4.0K Oct 18 00:19 ./
+drwxr-x--- 5 lena lena 4.0K Oct 17 23:53 ../
+drwxr-xr-x 8 lena lena 4.0K Oct 17 23:52 .git/
+-rw-r--r-- 1 lena lena   28 Oct 17 23:52 .gitignore
+-rw-r--r-- 1 lena lena  168 Oct 17 23:52 CMakeLists.txt
+-rw-r--r-- 1 lena lena 3.9K Oct 17 23:52 README.md
+-rw-r--r-- 1 lena lena 2.3K Oct 18 00:19 execution.log
+-rw-r--r-- 1 lena lena   98 Oct 17 23:52 hi.cpp
+-rw-r--r-- 1 lena lena  239 Oct 17 23:52 names.cpp
+-rw-r--r-- 1 lena lena   99 Oct 17 23:52 ola.cpp
