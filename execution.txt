@@ -1,0 +1,168 @@
+total 76K
+drwxr-x--- 6 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 22:12 ./
+drwxr-xr-x 3 root               root               4.0K Oct 10 19:45 ../
+-rw------- 1 vareniki_s_vishney vareniki_s_vishney 1.4K Oct 17 21:49 .bash_history
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney  220 Oct 10 19:45 .bash_logout
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney 3.7K Oct 10 19:45 .bashrc
+drwx------ 2 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 10 19:46 .cache/
+drwxr-xr-x 3 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 19:32 .local/
+-rw-rw-r-- 1 vareniki_s_vishney vareniki_s_vishney    0 Oct 17 19:28 .motd_shown
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney  807 Oct 10 19:45 .profile
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney    0 Oct 10 19:52 .sudo_as_admin_successful
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney    0 Oct 17 22:12 execution.log
+-rwxr-xr-x 1 vareniki_s_vishney vareniki_s_vishney  17K Oct 17 19:34 hello
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney   97 Oct 17 19:33 hello.cpp
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney   82 Oct 17 21:51 hi.cpp
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney  263 Oct 17 22:08 names.cpp
+drwxr-xr-x 3 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 21:15 new_projects/
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney   83 Oct 17 21:52 ola.cpp
+drwxr-xr-x 2 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 22:11 todays_work/
+hi
+total 100K
+drwxr-x--- 6 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 22:15 ./
+drwxr-xr-x 3 root               root               4.0K Oct 10 19:45 ../
+-rw------- 1 vareniki_s_vishney vareniki_s_vishney 1.4K Oct 17 21:49 .bash_history
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney  220 Oct 10 19:45 .bash_logout
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney 3.7K Oct 10 19:45 .bashrc
+drwx------ 2 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 10 19:46 .cache/
+drwxr-xr-x 3 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 19:32 .local/
+-rw-rw-r-- 1 vareniki_s_vishney vareniki_s_vishney    0 Oct 17 19:28 .motd_shown
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney  807 Oct 10 19:45 .profile
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney    0 Oct 10 19:52 .sudo_as_admin_successful
+-rwxr-xr-x 1 vareniki_s_vishney vareniki_s_vishney  17K Oct 17 22:15 a.out
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney 1.5K Oct 17 22:15 execution.log
+-rwxr-xr-x 1 vareniki_s_vishney vareniki_s_vishney  17K Oct 17 19:34 hello
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney   97 Oct 17 19:33 hello.cpp
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney   82 Oct 17 21:51 hi.cpp
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney  263 Oct 17 22:08 names.cpp
+drwxr-xr-x 3 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 21:15 new_projects/
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney   83 Oct 17 21:52 ola.cpp
+drwxr-xr-x 2 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 22:11 todays_work/
+ola
+.
+├── build
+│   ├── a.out
+│   └── ola.exe
+├── execution.log
+├── hello
+├── hello.cpp
+├── hi.cpp
+├── names.cpp
+├── new_projects
+│   ├── build
+│   │   ├── a.out
+│   │   ├── names.exe
+│   │   ├── ola.exe
+│   │   └── ola_clang.exe
+│   ├── hi.cpp
+│   ├── names.cpp
+│   └── ola.cpp
+├── ola.cpp
+└── todays_work
+    ├── hi.cpp
+    ├── names.cpp
+    └── ola.cpp
+
+5 directories, 18 files
+00000000000011a4 T _fini
+0000000000001000 T _init
+0000000000001080 T _start
+0000000000001169 T main
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+clang is already the newest version (1:18.0-59~exp2).
+0 upgraded, 0 newly installed, 0 to remove and 29 not upgraded.
+ola
+000000000000117c T _fini
+0000000000001000 T _init
+0000000000001060 T _start
+0000000000001150 T main
+0000000000001180 T _Z3barv
+0000000000001160 T _Z3foodd
+0000000000001140 T _Z3foov
+0000000000001150 T _Z3foox
+000000000000119c T _fini
+0000000000001000 T _init
+0000000000001040 T _start
+0000000000001190 T bar
+0000000000001130 T main
+names.cpp:12:2: error: unknown type name 'ошибка'
+   12 |  ошибка компиляции
+      |  ^
+names.cpp:12:35: error: expected ';' after top level declarator
+   12 |  ошибка компиляции
+      |                   ^
+      |                   ;
+2 errors generated.
+.
+├── build
+│   ├── a.out
+│   ├── names.exe
+│   ├── ola.exe
+│   └── ola_clang.exe
+├── execution.log
+├── hello
+├── hello.cpp
+├── hi.cpp
+├── names.cpp
+├── new_projects
+│   ├── build
+│   │   ├── a.out
+│   │   ├── names.exe
+│   │   ├── ola.exe
+│   │   └── ola_clang.exe
+│   ├── hi.cpp
+│   ├── names.cpp
+│   └── ola.cpp
+├── ola.cpp
+└── todays_work
+    ├── hi.cpp
+    ├── names.cpp
+    └── ola.cpp
+
+5 directories, 20 files
+.
+├── execution.log
+├── hello
+├── hello.cpp
+├── hi.cpp
+├── names.cpp
+├── new_projects
+│   ├── build
+│   │   ├── a.out
+│   │   ├── names.exe
+│   │   ├── ola.exe
+│   │   └── ola_clang.exe
+│   ├── hi.cpp
+│   ├── names.cpp
+│   └── ola.cpp
+├── ola.cpp
+└── todays_work
+    ├── hi.cpp
+    ├── names.cpp
+    └── ola.cpp
+
+4 directories, 16 files
+total 84K
+drwxr-x--- 6 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 22:29 ./
+drwxr-xr-x 3 root               root               4.0K Oct 10 19:45 ../
+-rw------- 1 vareniki_s_vishney vareniki_s_vishney 1.4K Oct 17 21:49 .bash_history
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney  220 Oct 10 19:45 .bash_logout
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney 3.7K Oct 10 19:45 .bashrc
+drwx------ 2 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 10 19:46 .cache/
+drwxr-xr-x 3 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 19:32 .local/
+-rw-rw-r-- 1 vareniki_s_vishney vareniki_s_vishney    0 Oct 17 19:28 .motd_shown
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney  807 Oct 10 19:45 .profile
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney    0 Oct 10 19:52 .sudo_as_admin_successful
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney 5.6K Oct 17 22:30 execution.log
+-rwxr-xr-x 1 vareniki_s_vishney vareniki_s_vishney  17K Oct 17 19:34 hello
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney   97 Oct 17 19:33 hello.cpp
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney   82 Oct 17 21:51 hi.cpp
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney  263 Oct 17 22:27 names.cpp
+drwxr-xr-x 3 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 21:15 new_projects/
+-rw-r--r-- 1 vareniki_s_vishney vareniki_s_vishney   83 Oct 17 21:52 ola.cpp
+drwxr-xr-x 2 vareniki_s_vishney vareniki_s_vishney 4.0K Oct 17 22:11 todays_work/
