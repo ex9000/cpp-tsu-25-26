@@ -8,7 +8,7 @@ void billamount(int N){
         cin >> a >> b;
         c+=a*b;
     }
-    cout << c;
+    cout << c << endl;
 }
 
 int main(){
