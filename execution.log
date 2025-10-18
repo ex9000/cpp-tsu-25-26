@@ -1,0 +1,100 @@
+=== Начало выполнения задания ===
+=== Компиляция hi.cpp ===
+=== Запуск a.out ===
+hi
+=== Список файлов после компиляции hi.cpp ===
+total 60K
+drwxr-xr-x 3 ramil ramil 4.0K Oct 18 20:21 ./
+drwxr-xr-x 3 ramil ramil 4.0K Oct 18 20:07 ../
+drwxr-xr-x 8 ramil ramil 4.0K Oct 18 20:07 .git/
+-rw-r--r-- 1 ramil ramil   28 Oct 18 20:07 .gitignore
+-rw-r--r-- 1 ramil ramil  168 Oct 18 20:07 CMakeLists.txt
+-rw-r--r-- 1 ramil ramil 3.9K Oct 18 20:07 README.md
+-rwxr-xr-x 1 ramil ramil  17K Oct 18 20:21 a.out
+-rw-r--r-- 1 ramil ramil  196 Oct 18 20:21 execution.log
+-rw-r--r-- 1 ramil ramil   82 Oct 18 20:07 hi.cpp
+-rw-r--r-- 1 ramil ramil  266 Oct 18 20:07 names.cpp
+-rw-r--r-- 1 ramil ramil   83 Oct 18 20:07 ola.cpp
+=== Компиляция ola.cpp ===
+=== Запуск ola.exe ===
+ola
+=== Создание директории build ===
+=== Перемещение файлов в build ===
+=== Структура проекта ===
+.
+├── CMakeLists.txt
+├── README.md
+├── build
+│   ├── a.out
+│   └── ola.exe
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+2 directories, 8 files
+=== Анализ ola.exe ===
+00000000000011a4 T _fini
+0000000000001000 T _init
+0000000000001080 T _start
+0000000000001169 T main
+=== Компиляция ola.cpp с помощью clang ===
+=== Запуск ola_clang.exe ===
+ola
+=== Анализ ola_clang.exe ===
+000000000000117c T _fini
+0000000000001000 T _init
+0000000000001060 T _start
+0000000000001150 T main
+=== Компиляция names.cpp ===
+=== Запуск names.exe ===
+=== Анализ names.exe ===
+0000000000001180 T _Z3barv
+0000000000001160 T _Z3foodd
+0000000000001140 T _Z3foov
+0000000000001150 T _Z3foox
+000000000000119c T _fini
+0000000000001000 T _init
+0000000000001040 T _start
+0000000000001190 T bar
+0000000000001130 T main
+=== Попытка компиляции с ошибкой ===
+=== Структура проекта перед очисткой ===
+.
+├── CMakeLists.txt
+├── README.md
+├── build
+│   ├── a.out
+│   ├── names.exe
+│   ├── ola.exe
+│   └── ola_clang.exe
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+2 directories, 10 files
+=== Удаление директории build ===
+=== Финальная структура проекта ===
+.
+├── CMakeLists.txt
+├── README.md
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+1 directory, 6 files
+=== Финальный список файлов ===
+total 40K
+drwxr-xr-x 3 ramil ramil 4.0K Oct 18 20:21 ./
+drwxr-xr-x 3 ramil ramil 4.0K Oct 18 20:07 ../
+drwxr-xr-x 8 ramil ramil 4.0K Oct 18 20:07 .git/
+-rw-r--r-- 1 ramil ramil   28 Oct 18 20:07 .gitignore
+-rw-r--r-- 1 ramil ramil  168 Oct 18 20:07 CMakeLists.txt
+-rw-r--r-- 1 ramil ramil 3.9K Oct 18 20:07 README.md
+-rw-r--r-- 1 ramil ramil 2.6K Oct 18 20:21 execution.log
+-rw-r--r-- 1 ramil ramil   82 Oct 18 20:07 hi.cpp
+-rw-r--r-- 1 ramil ramil  266 Oct 18 20:07 names.cpp
+-rw-r--r-- 1 ramil ramil   83 Oct 18 20:07 ola.cpp
+=== Задание завершено ===
