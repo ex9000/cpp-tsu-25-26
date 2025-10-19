@@ -1,0 +1,91 @@
+hi
+total 64K
+drwxrwxr-x 3 dligr dligr 4.0K Oct 19 15:57 ./
+drwxr-xr-x 4 dligr dligr 4.0K Oct 19 15:27 ../
+-rwxrwxr-x 1 dligr dligr  17K Oct 19 15:57 a.out
+drwxrwxr-x 2 dligr dligr 4.0K Oct 19 15:57 build/
+-rw-rw-r-- 1 dligr dligr   29 Oct 19 15:54 clang++
+-rw-rw-r-- 1 dligr dligr  168 Oct  4 13:51 CMakeLists.txt
+-rw-rw-r-- 1 dligr dligr    3 Oct 19 15:57 execution.log
+-rw-rw-r-- 1 dligr dligr   28 Oct  4 13:51 .gitignore
+-rw-rw-r-- 1 dligr dligr   82 Oct  4 13:51 hi.cpp
+-rw-rw-r-- 1 dligr dligr  266 Oct 19 15:57 names.cpp
+-rw-rw-r-- 1 dligr dligr   83 Oct  4 13:51 ola.cpp
+-rw-rw-r-- 1 dligr dligr 3.9K Oct  4 13:51 README.md
+ola
+.
+├── build
+│   ├── a.out
+│   ├── names.exe
+│   ├── ola_clang.exe
+│   └── ola.exe
+├── clang++
+├── CMakeLists.txt
+├── execution.log
+├── hi.cpp
+├── names.cpp
+├── ola.cpp
+└── README.md
+
+2 directories, 11 files
+00000000000011a4 T _fini
+0000000000001000 T _init
+0000000000001169 T main
+0000000000001080 T _start
+ola
+000000000000117c T _fini
+0000000000001000 T _init
+0000000000001150 T main
+0000000000001060 T _start
+0000000000001190 T bar
+000000000000119c T _fini
+0000000000001000 T _init
+0000000000001130 T main
+0000000000001040 T _start
+0000000000001180 T _Z3barv
+0000000000001160 T _Z3foodd
+0000000000001140 T _Z3foov
+0000000000001150 T _Z3foox
+names.cpp:14:6: error: declaration of 'bar' has a different language linkage
+   14 | void bar() {}
+      |      ^
+names.cpp:8:6: note: previous definition is here
+    8 | void bar() {}
+      |      ^
+1 error generated.
+.
+├── build
+│   ├── a.out
+│   ├── names.exe
+│   ├── ola_clang.exe
+│   └── ola.exe
+├── clang++
+├── CMakeLists.txt
+├── execution.log
+├── hi.cpp
+├── names.cpp
+├── ola.cpp
+└── README.md
+
+2 directories, 11 files
+.
+├── clang++
+├── CMakeLists.txt
+├── execution.log
+├── hi.cpp
+├── names.cpp
+├── ola.cpp
+└── README.md
+
+1 directory, 7 files
+total 40K
+drwxrwxr-x 2 dligr dligr 4.0K Oct 19 16:04 ./
+drwxr-xr-x 4 dligr dligr 4.0K Oct 19 15:27 ../
+-rw-rw-r-- 1 dligr dligr   29 Oct 19 15:54 clang++
+-rw-rw-r-- 1 dligr dligr  168 Oct  4 13:51 CMakeLists.txt
+-rw-rw-r-- 1 dligr dligr 2.0K Oct 19 16:04 execution.log
+-rw-rw-r-- 1 dligr dligr   28 Oct  4 13:51 .gitignore
+-rw-rw-r-- 1 dligr dligr   82 Oct  4 13:51 hi.cpp
+-rw-rw-r-- 1 dligr dligr  263 Oct 19 16:00 names.cpp
+-rw-rw-r-- 1 dligr dligr   83 Oct  4 13:51 ola.cpp
+-rw-rw-r-- 1 dligr dligr 3.9K Oct  4 13:51 README.md
