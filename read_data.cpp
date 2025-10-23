@@ -1,3 +1,7 @@
+#include <iostream>
+#include <string>
+struct Product { std::string name; double prices[100]; };
+
 void read_data(Product products[], long long int n, long long int k){
     for(long long int i = 0;i < n;i++){
         cin>>products[i].name;
