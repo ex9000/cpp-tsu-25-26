@@ -55,7 +55,7 @@ int main() {
     long long int ResultInd = -1;
     double minDiff = DBL_MAX;
 
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 11; i++) {
         double diff = abs(Scored[i].score - scores_2);
         if (diff < minDiff) {
             minDiff = diff;
@@ -70,3 +70,4 @@ int main() {
     return 0;
 
 }
+
