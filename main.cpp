@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <cfloat>
 
 using namespace std;
 struct Index {
@@ -67,4 +68,5 @@ int main() {
         << " (score: " << Scored[ResultInd].score << ")" << endl;
 
     return 0;
+
 }
