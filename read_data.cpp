@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 struct Product { std::string name; double prices[100]; };
 
 void read_data(Product products[], long long int n, long long int k){
