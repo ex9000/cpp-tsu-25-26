@@ -1,3 +1,8 @@
+struct Index { long long int index; double value; };
+struct Product { std::string name; double prices[100]; };
+void insertion_sort(Index arr[], long long int n);
+double average(double arr[], long long int n);
+
 ScoredProduct convert_product(Product p, long long int k){
     ScoredProduct sp;
     sp.name = p.name;
