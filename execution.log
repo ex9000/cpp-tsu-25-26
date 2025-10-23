@@ -1,0 +1,68 @@
+hi
+total 20K
+drwxrwxrwx 1 shy_am_i shy_am_i 512 Oct 24 00:20 ./
+drwxrwxrwx 1 shy_am_i shy_am_i 512 Oct 24 00:06 ../
+-rwxrwxrwx 1 shy_am_i shy_am_i 168 Oct 24 00:17 CMakeLists.txt
+-rwxrwxrwx 1 shy_am_i shy_am_i 17K Oct 24 00:20 a.out
+-rwxrwxrwx 1 shy_am_i shy_am_i   3 Oct 24 00:21 execution.log
+-rwxrwxrwx 1 shy_am_i shy_am_i  82 Oct 23 23:54 hi.cpp
+-rwxrwxrwx 1 shy_am_i shy_am_i 266 Oct 24 00:20 names.cpp
+-rwxrwxrwx 1 shy_am_i shy_am_i  83 Oct 24 00:06 ola.cpp
+ola
+.
+├── CMakeLists.txt
+├── build
+│   ├── a.out
+│   └── ola.exe
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+2 directories, 7 files
+00000000000011a4 T _fini
+0000000000001000 T _init
+0000000000001080 T _start
+0000000000001169 T main
+ola
+000000000000117c T _fini
+0000000000001000 T _init
+0000000000001060 T _start
+0000000000001150 T main
+0000000000001180 T _Z3barv
+0000000000001160 T _Z3foodd
+0000000000001140 T _Z3foov
+0000000000001150 T _Z3foox
+000000000000119c T _fini
+0000000000001000 T _init
+0000000000001040 T _start
+0000000000001190 T bar
+0000000000001130 T main
+names.cpp:14:6: error: declaration of 'bar' has a different language linkage
+   14 | void bar() {}
+      |      ^
+names.cpp:8:6: note: previous definition is here
+    8 | void bar() {}
+      |      ^
+1 error generated.
+.
+├── CMakeLists.txt
+├── build
+│   ├── a.out
+│   ├── names.exe
+│   ├── ola.exe
+│   └── ola_clang.exe
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+2 directories, 9 files
+.
+├── CMakeLists.txt
+├── execution.log
+├── hi.cpp
+├── names.cpp
+└── ola.cpp
+
+1 directory, 5 files
