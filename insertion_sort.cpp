@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
-#include "structs.h"
 using namespace std;
+
+struct Index {
+    long long int index;
+    double value;
+};
 
 void insertion_sort(Index arr[], long long int n) {
     for (long long int i = 1; i < n; i++) {

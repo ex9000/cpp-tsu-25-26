@@ -1,6 +1,20 @@
 #include <bits/stdc++.h>
-#include "structs.h"
 using namespace std;
+
+struct Index {
+    long long int index;
+    double value;
+};
+
+struct Product {
+    string name;
+    double prices[100];
+};
+
+struct ScoredProduct {
+    string name;
+    double score;
+};
 
 extern void insertion_sort(Index arr[], long long int n);
 extern double product(double arr[], long long int n);
@@ -14,7 +28,7 @@ ScoredProduct convert_product(Product p, long long int k) {
 
     insertion_sort(idx, k);
 
-    long long int newK = min(9LL, k); // X = 9 из твоего варианта
+    long long int newK = min(9LL, k);
     double sorted_prices[100];
     for (long long int i = 0; i < newK; i++) {
         sorted_prices[i] = idx[i].value;

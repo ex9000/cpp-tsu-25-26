@@ -1,6 +1,20 @@
 #include <bits/stdc++.h>
-#include "structs.h"
 using namespace std;
+
+struct Index {
+    long long int index;
+    double value;
+};
+
+struct Product {
+    string name;
+    double prices[100];
+};
+
+struct ScoredProduct {
+    string name;
+    double score;
+};
 
 extern void read_data(Product products[], long long int n, long long int k);
 extern ScoredProduct convert_product(Product p, long long int k);
@@ -26,7 +40,7 @@ int main() {
     }
     bubble_sort(idx, N);
 
-    long long int newN = min(5LL, N); // Y = 5 из твоего варианта
+    long long int newN = min(5LL, N);
     double scores[100];
     for (long long int i = 0; i < newN; i++) {
         scores[i] = idx[i].value;
