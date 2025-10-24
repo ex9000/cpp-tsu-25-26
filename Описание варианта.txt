@@ -1,0 +1,38 @@
+Введите ФИО: Шигабутдинов Рамиль Далерович
+ID варианта: 2659453007
+
+Алгоритм сортировки:
+  - selection_sort
+
+Функции оценки:
+  1) product
+  2) maximum
+
+X (цены после сортировки): 21
+Y (товары после сортировки): 7
+
+Единицы компиляции, всего: 3
+  [1] static: libmaximum-product.a
+      функции: maximum, product
+  [2] static: libconvert_product-read_data.a
+      функции: convert_product, read_data
+  [3] dynamic: libselection_sort.so
+      функции: selection_sort
+
+Структуры:
+  struct Index { long long int index; double value; };
+  struct Product { std::string name; double prices[100]; };
+  struct ScoredProduct { std::string name; double score; };
+
+Сигнатуры (общие):
+  int main();
+  void read_data(Product[] products, long long int n, long long int k);
+  ScoredProduct convert_product(Product p, long long int k);
+
+Сигнатуры (прочие):
+  void selection_sort(Index arr[], long long int n);
+  double product(double arr[], long long int n);
+  double maximum(double arr[], long long int n);
+
+
+Process finished with exit code 0
