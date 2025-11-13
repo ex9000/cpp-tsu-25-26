@@ -6,7 +6,6 @@ using namespace std;
 struct Node {
     long long value;
     Node* next;
-
     Node(long long val) : value(val), next(nullptr) {}
 };
 
@@ -19,29 +18,31 @@ struct List {
         current = head;
     }
 
+
     void append(long long X) {
         Node* newNode = new Node(X);
         newNode->next = current->next;
         current->next = newNode;
         current = newNode;
-        cout << "append " << X << " - OK" << endl;
+        cout << "append " << X << " - OK" << '\n';
     }
 
     void go(long long N) {
+        long long originalN = N;
         while (N > 0 && current->next) {
             current = current->next;
             N--;
         }
-        cout << "go " << N << " - OK" << endl;
+        cout << "go " << originalN << " - OK" << '\n';
     }
 
     void print() {
-        cout << "print " << current->value << " - OK" << endl;
+        cout << "print " << current->value << " - OK" << '\n';
     }
 
     void reset() {
         current = head;
-        cout << "reset - OK" << endl;
+        cout << "reset - OK" << '\n';
     }
 };
 
@@ -52,15 +53,12 @@ int main() {
         if (cmd == "append") {
             long long X; cin >> X;
             lst.append(X);
-        }
-        else if (cmd == "go") {
+        } else if (cmd == "go") {
             long long N; cin >> N;
             lst.go(N);
-        }
-        else if (cmd == "print") {
+        } else if (cmd == "print") {
             lst.print();
-        }
-        else if (cmd == "reset") {
+        } else if (cmd == "reset") {
             lst.reset();
         }
     }
