@@ -24,7 +24,7 @@ struct List {
         newNode->next = current->next;
         current->next = newNode;
         current = newNode;
-        cout << "append " << X << " - OK" << '\n';
+        cout << "append " << X << " - OK" << endl;
     }
 
     void go(long long N) {
@@ -32,16 +32,16 @@ struct List {
             current = current->next;
             N--;
         }
-        cout << "go " << N << " - OK" << '\n';
+        cout << "go " << N << " - OK" << endl;
     }
 
     void print() {
-        cout << "print " << current->value << " - OK" << '\n';
+        cout << "print " << current->value << " - OK" << endl;
     }
 
     void reset() {
         current = head;
-        cout << "reset - OK" << '\n';
+        cout << "reset - OK" << endl;
     }
 };
 
@@ -52,12 +52,15 @@ int main() {
         if (cmd == "append") {
             long long X; cin >> X;
             lst.append(X);
-        } else if (cmd == "go") {
+        }
+        else if (cmd == "go") {
             long long N; cin >> N;
             lst.go(N);
-        } else if (cmd == "print") {
+        }
+        else if (cmd == "print") {
             lst.print();
-        } else if (cmd == "reset") {
+        }
+        else if (cmd == "reset") {
             lst.reset();
         }
     }
