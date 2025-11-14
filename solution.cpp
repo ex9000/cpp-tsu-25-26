@@ -12,6 +12,7 @@ struct List {
 int main() {
     List *head = new List;
     head->value = 100;
+    head->next = nullptr;
 
     List *curr = head;
     string cmd;
@@ -22,6 +23,7 @@ int main() {
             // Ваша реализация здесь
             List *node = new List;
             node->value = X;
+            node->next = nullptr;
             curr->next = node;
             curr = node;
             cout << "append " << X << " - OK" << '\n';
