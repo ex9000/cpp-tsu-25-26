@@ -59,8 +59,25 @@ struct Geometry {
     Point2D begin, end;
 };
 
-Double distance(Geometry g1, Geometry g2)
-{
-    // Placeholder implementation
-    return Double { 0.0 };
+Double distance(Geometry g1, Geometry g2) {
+    double dx1 = g1.end.x.value - g1.begin.x.value;
+    double dy1 = g1.end.y.value - g1.begin.y.value;
+
+    double dx2 = g2.end.x.value - g2.begin.x.value;
+    double dy2 = g2.end.y.value - g2.begin.y.value;
+
+    double pseydo_vect_proizv = dx1 * dy2 - dy1 * dx2;
+
+    if (std::abs(pseydo_vect_proizv) > EPSILON) {
+        return Double{ 0.0 };
+    }
+
+    double dx_diff = g1.begin.x.value - g2.begin.x.value;
+    double dy_diff = g1.begin.y.value - g2.begin.y.value;
+
+    double area = std::abs(dx_diff * dy2 - dy_diff * dx2);
+
+    double length2 = std::sqrt(dx2 * dx2 + dy2 * dy2);
+
+    return Double{ area / length2 };
 }
