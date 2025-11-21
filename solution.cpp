@@ -4,40 +4,53 @@
 using namespace std;
 
 struct List {
-    // определите самостоятельно
+    long long value;
+    List* next;
 };
 
 int main() {
-    // Подсказка - используйте List
-    // А для создания новых элементов списка воспользуйтесь оператором new
+    List* start = new List;
 
-    // Тесты из примера можно пройти без списка, сохраняя только последние значения
-    // Но финальные тесты так не пройдут!
-    long long int last_value = 100;
-    long long int current_value = 100;
+    start->value = 100;
+    start->next = nullptr;
+
+    List* now = start;
 
     string cmd;
     while (cin >> cmd) {
-        // Выполните обработку команд append, go, print, reset
         if (cmd == "append") {
             long long X; cin >> X;
-            // Ваша реализация здесь
-            last_value = current_value = X;
+
+            List* AppendNode = new List;
+
+            AppendNode->value = X;
+            AppendNode->next = nullptr;
+
+            AppendNode->next = now->next;
+            now->next = AppendNode;
+
+            now = AppendNode;
             cout << "append " << X << " - OK" << '\n';
-        } else if (cmd == "go") {
-            long long N; cin >> N; long long originalN = N;
-            // Ваша реализация здесь
-            current_value = last_value;
-            cout << "go " << originalN << " - OK" << '\n';
-        } else if (cmd == "print") {
-            // Ваша реализация здесь
-            cout << "print " << current_value << " - OK" << '\n';
-        } else if (cmd == "reset") {
-            // Ваша реализация здесь
-            current_value = 100;
+        }
+
+        else if (cmd == "go") {
+            long long N; cin >> N;
+            long long Ishodnoe = N;
+
+            while (N > 0 and now->next != nullptr) {
+                now = now->next;
+                N--;
+            }
+            cout << "go " << Ishodnoe << " - OK" << '\n';
+        }
+
+        else if (cmd == "print") {
+            cout << "print " << now->value << " - OK" << '\n';
+        }
+
+        else if (cmd == "reset") {
+            now = start;
             cout << "reset - OK" << '\n';
-        } else {
-            // Игнорируем неизвестные команды (не должны встречаться по условию)
         }
     }
 
