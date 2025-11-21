@@ -4,15 +4,52 @@
 using namespace std;
 
 struct List {
+private:
+    struct Node {
+        Node(long long int new_value) {
+            value = new_value;
+            next = nullptr;
+        }
+
+        long long int value;
+
+        Node* next;
+    };
+
+    Node* root;
+
+    Node* current;
+
 public:
-    List(long long int new_value) {
-        value = new_value;
-        next = nullptr;
+    List(long long int first) {
+        root = new Node(first);
+        current = root;
     }
 
-    long long int value;
+    long long int Current() {
+        return current->value;
+    }
 
-    List* next;
+    void Append(long long int N) {
+        current->next = new Node(N);
+
+        current = current->next;
+    }
+
+    void Reset() {
+        current = root;
+    }
+
+    void Go(long long int N) {
+        for (int i = 0; i < N; i++) {
+            if (current->next == nullptr)
+            {
+                break;
+            }
+
+            current = current->next;
+        }
+    }
 };
 
 int main() {
@@ -26,38 +63,26 @@ int main() {
 
     auto list = new List(current_value);
 
-    auto root = list;
-
     string cmd;
     while (cin >> cmd) {
         // Выполните обработку команд append, go, print, reset
         if (cmd == "append") {
             long long X; cin >> X;
 
-            list->next = new List(X);
-            list = list->next;
+            list->Append(X);
 
-            last_value = current_value = X;
             cout << "append " << X << " - OK" << '\n';
         } else if (cmd == "go") {
             long long N; cin >> N; long long originalN = N;
             
-            for (int i = 0; i < N; i++) {
-                if (list->next == nullptr)
-                {
-                    break;
-                }
+            list->Go(N);
 
-                list = list->next;
-            }
-
-            current_value = last_value;
             cout << "go " << originalN << " - OK" << '\n';
         } else if (cmd == "print") {
-            cout << "print " << list->value << " - OK" << '\n';
+            cout << "print " << list->Current() << " - OK" << '\n';
         } else if (cmd == "reset") {
-            
-            list = root;
+
+            list->Reset();
 
             current_value = 100;
             cout << "reset - OK" << '\n';
