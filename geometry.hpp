@@ -23,7 +23,6 @@ struct Double {
         return (value < other.value) && !is_equal(other);
     }
 
-    // Операторы для удобства
     Double operator+(const Double& other) const { return Double{value + other.value}; }
     Double operator-(const Double& other) const { return Double{value - other.value}; }
     Double operator*(const Double& other) const { return Double{value * other.value}; }
@@ -72,7 +71,6 @@ struct Point2D {
     }
 };
 
-// Вспомогательные функции
 Double dot(const Point2D& a, const Point2D& b) {
     return a.dot(b);
 }
@@ -196,7 +194,6 @@ Double distance(Geometry g1, Geometry g2) {
 
     Double candidate = Double{1e18};
 
-    // Проверяем пересечение в параметрическом пространстве
     if (!det.is_equal(Double{0.0})) {
         Double t = (B * E - C * D) / det;
         Double s = (B * D - A * E) / det;
@@ -207,19 +204,16 @@ Double distance(Geometry g1, Geometry g2) {
             candidate = min_double(candidate, P.distance(Q));
         }
     }
-
-    // Для параллельных прямых используем расстояние от точки до прямой
     if (g1.kind == Kind::Line && g2.kind == Kind::Line && det.is_equal(Double{0.0})) {
         candidate = min_double(candidate, distance_point_to_geometry(g1.begin, g2));
     }
 
-    // Проверяем граничные точки g1 относительно g2
+
     candidate = min_double(candidate, distance_point_to_geometry(g1.begin, g2));
     if (g1.kind == Kind::Segment) {
         candidate = min_double(candidate, distance_point_to_geometry(g1.end, g2));
     }
 
-    // Проверяем граничные точки g2 относительно g1
     candidate = min_double(candidate, distance_point_to_geometry(g2.begin, g1));
     if (g2.kind == Kind::Segment) {
         candidate = min_double(candidate, distance_point_to_geometry(g2.end, g1));
