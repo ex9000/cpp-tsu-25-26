@@ -31,8 +31,9 @@ public:
     }
 
     void Append(long long int N) {
-        current->next = new Node(N);
-
+        auto node = new Node(N);
+        node->next = current->next;
+        current->next = node;
         current = current->next;
     }
 
