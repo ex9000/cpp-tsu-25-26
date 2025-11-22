@@ -21,12 +21,8 @@ struct List {
     
     void append(long long X) {
         Node* newNode = new Node(X);
-        if (current->next == nullptr) {
-            current->next = newNode;
-        } else {
-            newNode->next = current->next;
-            current->next = newNode;
-        }
+        newNode->next = current->next;
+        current->next = newNode;
         current = newNode;
     }
     
@@ -48,40 +44,23 @@ struct List {
 int main() {
     // Подсказка - используйте List
     List list;
-    // А для создания новых элементов списка воспользуйтесь оператором new
-
-    // Тесты из примера можно пройти без списка, сохраняя только последние значения
-    // Но финальные тесты так не пройдут!
-    long long int last_value = 100;
-    long long int current_value = 100;
 
     string cmd;
     while (cin >> cmd) {
-        // Выполните обработку команд append, go, print, reset
         if (cmd == "append") {
             long long X; cin >> X;
-            // Ваша реализация здесь
             list.append(X);
-            last_value = current_value = X;
             cout << "append " << X << " - OK" << '\n';
         } else if (cmd == "go") {
-            long long N; cin >> N; long long originalN = N;
-            // Ваша реализация здесь
+            long long N; cin >> N;
             list.go(N);
-            current_value = list.print();
-            last_value = current_value;
-            cout << "go " << originalN << " - OK" << '\n';
+            cout << "go " << N << " - OK" << '\n';
         } else if (cmd == "print") {
-            // Ваша реализация здесь
-            current_value = list.print();
-            cout << "print " << current_value << " - OK" << '\n';
+            long long value = list.print();
+            cout << "print " << value << " - OK" << '\n';
         } else if (cmd == "reset") {
-            // Ваша реализация здесь
             list.reset();
-            current_value = 100;
             cout << "reset - OK" << '\n';
-        } else {
-            // Игнорируем неизвестные команды (не должны встречаться по условию)
         }
     }
 
