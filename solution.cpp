@@ -7,7 +7,6 @@ struct Node {
     long long value;
     Node* prev;
     Node* next;
-    Node(long long v) : value(v), prev(nullptr), next(nullptr) {}
 };
 
 struct List {
@@ -15,26 +14,17 @@ struct List {
     Node* tail;
     Node* current;
     
-    List() : head(nullptr), tail(nullptr), current(nullptr) {}
-    
-    void init() {
-        head = new Node(100);
+    List() {
+        head = new Node{100, nullptr, nullptr};
         tail = head;
         current = head;
     }
     
     void append(long long X) {
-        Node* newNode = new Node(X);
-        if (!head) {
-            head = newNode;
-            tail = newNode;
-            current = newNode;
-        } else {
-            tail->next = newNode;
-            newNode->prev = tail;
-            tail = newNode;
-            current = newNode;
-        }
+        Node* newNode = new Node{X, tail, nullptr};
+        tail->next = newNode;
+        tail = newNode;
+        current = newNode;
     }
     
     void go(long long N) {
@@ -60,7 +50,6 @@ struct List {
 
 int main() {
     List list;
-    list.init();
 
     string cmd;
     while (cin >> cmd) {
@@ -69,10 +58,9 @@ int main() {
             list.append(X);
             cout << "append " << X << " - OK" << '\n';
         } else if (cmd == "go") {
-            long long N; cin >> N; 
-            long long originalN = N;
+            long long N; cin >> N;
             list.go(N);
-            cout << "go " << originalN << " - OK" << '\n';
+            cout << "go " << N << " - OK" << '\n';
         } else if (cmd == "print") {
             list.print();
         } else if (cmd == "reset") {
@@ -82,4 +70,5 @@ int main() {
     }
 
     return 0;
+}
 }
