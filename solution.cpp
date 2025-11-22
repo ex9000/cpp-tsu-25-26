@@ -3,41 +3,81 @@
 
 using namespace std;
 
+struct Node {
+    long long value;
+    Node* prev;
+    Node* next;
+    Node(long long v) : value(v), prev(nullptr), next(nullptr) {}
+};
+
 struct List {
-    // определите самостоятельно
+    Node* head;
+    Node* tail;
+    Node* current;
+    
+    List() : head(nullptr), tail(nullptr), current(nullptr) {}
+    
+    void init() {
+        head = new Node(100);
+        tail = head;
+        current = head;
+    }
+    
+    void append(long long X) {
+        Node* newNode = new Node(X);
+        if (!head) {
+            head = newNode;
+            tail = newNode;
+            current = newNode;
+        } else {
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+            current = newNode;
+        }
+    }
+    
+    void go(long long N) {
+        if (N > 0) {
+            for (long long i = 0; i < N && current->next; i++) {
+                current = current->next;
+            }
+        } else if (N < 0) {
+            for (long long i = 0; i < -N && current->prev; i++) {
+                current = current->prev;
+            }
+        }
+    }
+    
+    void print() {
+        cout << current->value << endl;
+    }
+    
+    void reset() {
+        current = head;
+    }
 };
 
 int main() {
-    // Подсказка - используйте List
-    // А для создания новых элементов списка воспользуйтесь оператором new
-
-    // Тесты из примера можно пройти без списка, сохраняя только последние значения
-    // Но финальные тесты так не пройдут!
-    long long int last_value = 100;
-    long long int current_value = 100;
+    List list;
+    list.init();
 
     string cmd;
     while (cin >> cmd) {
-        // Выполните обработку команд append, go, print, reset
         if (cmd == "append") {
             long long X; cin >> X;
-            // Ваша реализация здесь
-            last_value = current_value = X;
+            list.append(X);
             cout << "append " << X << " - OK" << '\n';
         } else if (cmd == "go") {
-            long long N; cin >> N; long long originalN = N;
-            // Ваша реализация здесь
-            current_value = last_value;
+            long long N; cin >> N; 
+            long long originalN = N;
+            list.go(N);
             cout << "go " << originalN << " - OK" << '\n';
         } else if (cmd == "print") {
-            // Ваша реализация здесь
-            cout << "print " << current_value << " - OK" << '\n';
+            list.print();
         } else if (cmd == "reset") {
-            // Ваша реализация здесь
-            current_value = 100;
+            list.reset();
             cout << "reset - OK" << '\n';
-        } else {
-            // Игнорируем неизвестные команды (не должны встречаться по условию)
         }
     }
 
