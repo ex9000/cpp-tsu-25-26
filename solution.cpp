@@ -19,19 +19,14 @@ struct List {
         current = head;
     }
     
-    ~List() {
-        Node* temp = head;
-        while (temp != nullptr) {
-            Node* next = temp->next;
-            delete temp;
-            temp = next;
-        }
-    }
-    
     void append(long long X) {
         Node* newNode = new Node(X);
-        newNode->next = current->next;
-        current->next = newNode;
+        if (current->next == nullptr) {
+            current->next = newNode;
+        } else {
+            newNode->next = current->next;
+            current->next = newNode;
+        }
         current = newNode;
     }
     
@@ -55,6 +50,11 @@ int main() {
     List list;
     // А для создания новых элементов списка воспользуйтесь оператором new
 
+    // Тесты из примера можно пройти без списка, сохраняя только последние значения
+    // Но финальные тесты так не пройдут!
+    long long int last_value = 100;
+    long long int current_value = 100;
+
     string cmd;
     while (cin >> cmd) {
         // Выполните обработку команд append, go, print, reset
@@ -62,18 +62,23 @@ int main() {
             long long X; cin >> X;
             // Ваша реализация здесь
             list.append(X);
+            last_value = current_value = X;
             cout << "append " << X << " - OK" << '\n';
         } else if (cmd == "go") {
-            long long N; cin >> N;
+            long long N; cin >> N; long long originalN = N;
             // Ваша реализация здесь
             list.go(N);
-            cout << "go " << N << " - OK" << '\n';
+            current_value = list.print();
+            last_value = current_value;
+            cout << "go " << originalN << " - OK" << '\n';
         } else if (cmd == "print") {
             // Ваша реализация здесь
-            cout << "print " << list.print() << " - OK" << '\n';
+            current_value = list.print();
+            cout << "print " << current_value << " - OK" << '\n';
         } else if (cmd == "reset") {
             // Ваша реализация здесь
             list.reset();
+            current_value = 100;
             cout << "reset - OK" << '\n';
         } else {
             // Игнорируем неизвестные команды (не должны встречаться по условию)
