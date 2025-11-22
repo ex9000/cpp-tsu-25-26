@@ -5,46 +5,39 @@ using namespace std;
 
 struct Node {
     long long value;
-    Node* prev;
     Node* next;
+    Node(long long val) : value(val), next(nullptr) {}
 };
 
 struct List {
     Node* head;
-    Node* tail;
     Node* current;
     
     List() {
-        head = new Node{100, nullptr, nullptr};
-        tail = head;
+        head = new Node(100);
         current = head;
     }
     
     void append(long long X) {
-        Node* newNode = new Node{X, tail, nullptr};
-        tail->next = newNode;
-        tail = newNode;
+        Node* newNode = new Node(X);
+        newNode->next = current->next;
+        current->next = newNode;
         current = newNode;
     }
     
     void go(long long N) {
-        if (N > 0) {
-            for (long long i = 0; i < N && current->next; i++) {
-                current = current->next;
-            }
-        } else if (N < 0) {
-            for (long long i = 0; i < -N && current->prev; i++) {
-                current = current->prev;
-            }
+        while (N > 0 && current->next != nullptr) {
+            current = current->next;
+            N--;
         }
-    }
-    
-    void print() {
-        cout << current->value << endl;
     }
     
     void reset() {
         current = head;
+    }
+    
+    long long getCurrentValue() {
+        return current->value;
     }
 };
 
@@ -58,14 +51,16 @@ int main() {
             list.append(X);
             cout << "append " << X << " - OK" << '\n';
         } else if (cmd == "go") {
-            long long N; cin >> N;
+            long long N; cin >> N; long long originalN = N;
             list.go(N);
-            cout << "go " << N << " - OK" << '\n';
+            cout << "go " << originalN << " - OK" << '\n';
         } else if (cmd == "print") {
-            list.print();
+            cout << "print " << list.getCurrentValue() << " - OK" << '\n';
         } else if (cmd == "reset") {
             list.reset();
             cout << "reset - OK" << '\n';
+        } else {
+            // Игнорируем неизвестные команды
         }
     }
 
