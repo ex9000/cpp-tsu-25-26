@@ -84,9 +84,7 @@ bool between(Double t)
     return (!t.is_less(Double{0.0}) && !Double{1.0}.is_less(t));
 }
 
-// -------------------------------------------------------------
-// Проекция точки P на параметризованную прямую A + t*(B-A)
-// -------------------------------------------------------------
+
 bool project_on_line(Point2D A, Point2D B, Point2D P, double &t_out)
 {
     Point2D AB = B.sub(A);
@@ -102,9 +100,7 @@ bool project_on_line(Point2D A, Point2D B, Point2D P, double &t_out)
     return true;
 }
 
-// -------------------------------------------------------------
-// Проверка: принадлежит ли точка параметру t для Line / Ray / Segment
-// -------------------------------------------------------------
+
 bool valid_t(double t, Kind k)
 {
     if (k == Kind::Line) return true;
@@ -113,9 +109,7 @@ bool valid_t(double t, Kind k)
     return false;
 }
 
-// -------------------------------------------------------------
-// Расстояние от точки P до геометрического объекта g
-// -------------------------------------------------------------
+
 Double point_to_geometry(Point2D P, Geometry g)
 {
     Point2D A = g.begin;
@@ -140,9 +134,7 @@ Double point_to_geometry(Point2D P, Geometry g)
     return P.distance(proj);
 }
 
-// -------------------------------------------------------------
-// Проверка пересечения двух бесконечных прямых
-// -------------------------------------------------------------
+
 bool infinite_intersect(Point2D A, Point2D B, Point2D C, Point2D D, double &t1, double &t2)
 {
     double x1 = A.x.value, y1 = A.y.value;
@@ -154,7 +146,7 @@ bool infinite_intersect(Point2D A, Point2D B, Point2D C, Point2D D, double &t1, 
     double dx2 = x4 - x3, dy2 = y4 - y3;
 
     double det = dx1 * dy2 - dy1 * dx2;
-    if (std::fabs(det) < EPSILON) return false; // параллельны
+    if (std::fabs(det) < EPSILON) return false; 
 
     t1 = ((x3 - x1) * dy2 - (y3 - y1) * dx2) / det;
     t2 = ((x3 - x1) * dy1 - (y3 - y1) * dx1) / det;
@@ -167,14 +159,14 @@ Double distance(Geometry g1, Geometry g2)
    Point2D A = g1.begin, B = g1.end;
     Point2D C = g2.begin, D = g2.end;
 
-    // Попытка найти пересечение
+    
     double t1, t2;
     if (infinite_intersect(A, B, C, D, t1, t2)) {
         if (valid_t(t1, g1.kind) && valid_t(t2, g2.kind))
             return Double{ 0.0 };
     }
 
-    // Нет пересечения – ищем минимум среди расстояний точка → объект
+
     Double d1 = point_to_geometry(A, g2);
     Double d2 = point_to_geometry(B, g2);
     Double d3 = point_to_geometry(C, g1);
