@@ -42,7 +42,7 @@ int main(int argc, char* argv[]) {
         filename = "file.ini";
     }
 
-    std::fstream myFile("file.ini");
+    std::fstream myFile(filename);
     std::string line;
 
     read_local_config(myFile);
@@ -61,4 +61,5 @@ int main(int argc, char* argv[]) {
         save_local_config(filename);
     }
     return 0;
+
 }
